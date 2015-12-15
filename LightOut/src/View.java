@@ -15,23 +15,22 @@ import javax.swing.JTextArea;
 public class View extends JFrame implements ActionListener{
 	
 	private Light[][] lights = new Light[5][5];
-	private JPanel grids = new JPanel();
-	private JPanel panel1 = new JPanel();
+	JPanel grids = new JPanel();
+	JPanel panel1 = new JPanel();
 	private Controller c;
-	
+
 	public View() {
 		this.setTitle("Lights Out");
 		this.setSize(500, 500);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
-		this.setLayout(new BorderLayout());
 		c = new Controller();
 		GUI();
 	}
 	
 	public void GUI(){
 		this.init();
-		this.add(grids, BorderLayout.CENTER);
+		this.setContentPane(grids);
 		grids.setLayout(new GridLayout(5, 5));
 		grids.setBorder(BorderFactory.createTitledBorder(""));
 		pattern1();
@@ -59,7 +58,7 @@ public class View extends JFrame implements ActionListener{
 		View v = new View();
 	}
 
-	private void pattern1() {
+	public void pattern1() {
 		for(int i = 0; i < 5; i+=2){
 			for(int j = 0; j < 5; j+=2){
 				lights[i][j].changeCol();
