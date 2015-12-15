@@ -17,6 +17,7 @@ public class View extends JFrame implements ActionListener{
 	private Light[][] lights = new Light[5][5];
 	private JPanel grids = new JPanel();
 	private JPanel panel1 = new JPanel();
+	private Controller c;
 	
 	public View() {
 		this.setTitle("Lights Out");
@@ -24,6 +25,7 @@ public class View extends JFrame implements ActionListener{
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setLocationRelativeTo(null);
 		this.setLayout(new BorderLayout());
+		c = new Controller();
 		GUI();
 	}
 	
@@ -38,20 +40,19 @@ public class View extends JFrame implements ActionListener{
 				grids.add(lights[i][j]);
 			}
 		}
+		repaint();
 		this.setVisible(true);
+		
 	}
-	
-	private void addButton(String label) {
-	      JButton button = new JButton("");
-	      grids.add(button);
-	   }
 	
 	private void init() {
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
 				lights[i][j] = new Light(i, j, false);
+				lights[i][j].addActionListener(c);
 			}
 		}
+		repaint();
 	}
 	
 	public static void main (String[] args){
@@ -64,6 +65,7 @@ public class View extends JFrame implements ActionListener{
 				lights[i][j].changeCol();
 			}
 		}
+		repaint();
 	}
 	
 	public Light[][] getLights() {

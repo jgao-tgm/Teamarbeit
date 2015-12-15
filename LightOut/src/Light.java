@@ -27,5 +27,6 @@ public class Light extends JButton{
 		lon = !lon;
 		if(lon)this.setBackground(Color.YELLOW);
 		else this.setBackground(Color.BLACK);
+		repaint();
 	}
 }
