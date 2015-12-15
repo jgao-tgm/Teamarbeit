@@ -29,21 +29,15 @@ public class View extends JFrame implements ActionListener{
 	
 	public void GUI(){
 		this.init();
-		
 		this.add(grids, BorderLayout.CENTER);
 		grids.setLayout(new GridLayout(5, 5));
 		grids.setBorder(BorderFactory.createTitledBorder(""));
-		
+		pattern1();
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
 				grids.add(lights[i][j]);
 			}
 		}
-		
-	    this.add(panel1, BorderLayout.SOUTH);
-	    panel1.setLayout(new FlowLayout());
-
-	    
 		this.setVisible(true);
 	}
 	
@@ -62,6 +56,18 @@ public class View extends JFrame implements ActionListener{
 	
 	public static void main (String[] args){
 		View v = new View();
+	}
+
+	private void pattern1() {
+		for(int i = 0; i < 5; i+=2){
+			for(int j = 0; j < 5; j+=2){
+				lights[i][j].changeCol();
+			}
+		}
+	}
+	
+	public Light[][] getLights() {
+		return lights;
 	}
 
 	@Override
