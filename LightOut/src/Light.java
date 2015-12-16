@@ -3,12 +3,16 @@ import java.awt.Color;
 import javax.swing.JButton;
 
 public class Light extends JButton{
-	boolean lon;
-	int x;
-	int y;
+	private boolean lon;
+	private int x;
+	private int y;
 	
 	public int getX() {
 		return x;
+	}
+
+	public boolean isLon() {
+		return lon;
 	}
 
 	public int getY() {
@@ -25,7 +29,7 @@ public class Light extends JButton{
 	}
 	
 	public void changeCol(){
-		lon = !lon;
+		this.lon = !this.lon;
 		if(lon)this.setBackground(Color.YELLOW);
 		else this.setBackground(Color.BLACK);
 		repaint();

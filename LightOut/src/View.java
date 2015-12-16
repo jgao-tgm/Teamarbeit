@@ -33,12 +33,6 @@ public class View extends JFrame{
 		grids.setLayout(new GridLayout(5, 5));
 		grids.setBorder(BorderFactory.createTitledBorder(""));
 		pattern1();
-		for(int i = 0; i < 5; i++){
-			for(int j = 0; j < 5; j++){
-				grids.add(lights[i][j]);
-			}
-		}
-		grids.repaint();
 		repaint();
 		this.setVisible(true);
 	}
@@ -47,6 +41,7 @@ public class View extends JFrame{
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
 				lights[i][j] = new Light(i, j, false);
+				grids.add(lights[i][j]);
 				lights[i][j].addActionListener(c);
 			}
 		}
@@ -62,7 +57,7 @@ public class View extends JFrame{
 	
 	public void pattern2() {
 		for(int i = 0; i < 5; i++){
-			for(int j = 0; j < 5; j++){
+			for(int j = 0; j < 5; j+=2){
 				lights[i][j].changeCol();
 			}
 		}

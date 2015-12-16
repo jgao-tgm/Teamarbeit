@@ -19,11 +19,12 @@ public class Controller implements ActionListener{
 		if(y<4)v.getLights()[x][y+1].changeCol();
 		for(int i = 0; i < 5; i+=2){
 			for(int j = 0; j < 5; j+=2){
-				if(v.getLights()[i][j].lon)
+				if(v.getLights()[i][j].isLon())
 				return;
 			}
 		}
 		i++;
+		
 		JOptionPane.showMessageDialog(v.grids, "Sie haben die "+i+".te Runde geschafft");
 		switch(i){
 		case 1: v.pattern2(); v.repaint(); break; 
