@@ -21,6 +21,7 @@ public class Light extends JButton{
 		this.y=y;
 		if(lon)this.setBackground(Color.YELLOW);
 		else this.setBackground(Color.BLACK);
+		repaint();
 	}
 	
 	public void changeCol(){

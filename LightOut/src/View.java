@@ -12,19 +12,18 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 
-public class View extends JFrame implements ActionListener{
+public class View extends JFrame{
 	
 	private Light[][] lights = new Light[5][5];
 	JPanel grids = new JPanel();
 	JPanel panel1 = new JPanel();
-	private Controller c;
+	private Controller c = new Controller();
 
 	public View() {
 		this.setTitle("Lights Out");
 		this.setSize(500, 500);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setLocationRelativeTo(null);
-		c = new Controller();
+		this.setLocationRelativeTo(null); 
 		GUI();
 	}
 	
@@ -39,9 +38,9 @@ public class View extends JFrame implements ActionListener{
 				grids.add(lights[i][j]);
 			}
 		}
+		grids.repaint();
 		repaint();
 		this.setVisible(true);
-		
 	}
 	
 	private void init() {
@@ -51,30 +50,27 @@ public class View extends JFrame implements ActionListener{
 				lights[i][j].addActionListener(c);
 			}
 		}
-		repaint();
 	}
 	
-	public static void main (String[] args){
-		View v = new View();
-	}
-
 	public void pattern1() {
 		for(int i = 0; i < 5; i+=2){
 			for(int j = 0; j < 5; j+=2){
 				lights[i][j].changeCol();
 			}
 		}
-		repaint();
+	}
+	
+	public void pattern2() {
+		for(int i = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
+				lights[i][j].changeCol();
+			}
+		}
 	}
 	
 	public Light[][] getLights() {
 		return lights;
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

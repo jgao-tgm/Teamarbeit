@@ -24,8 +24,10 @@ public class Controller implements ActionListener{
 			}
 		}
 		i++;
-		JOptionPane.showInternalMessageDialog(v.grids, "Sie haben die "+i+".te Runde geschafft");
-		v.pattern1();
+		JOptionPane.showMessageDialog(v.grids, "Sie haben die "+i+".te Runde geschafft");
+		switch(i){
+		case 1: v.pattern2(); v.repaint(); break; 
+		}
 	}
 	
 }
