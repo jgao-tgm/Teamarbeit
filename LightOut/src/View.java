@@ -12,62 +12,60 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 
-public class View extends JFrame implements ActionListener{
+public class View extends JFrame{
 	
 	private Light[][] lights = new Light[5][5];
-	private JPanel grids = new JPanel();
-	private JPanel panel1 = new JPanel();
-	
+	JPanel grids = new JPanel();
+	JPanel panel1 = new JPanel();
+	private Controller c = new Controller();
+
 	public View() {
 		this.setTitle("Lights Out");
 		this.setSize(500, 500);
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
-		this.setLocationRelativeTo(null);
-		this.setLayout(new BorderLayout());
+		this.setLocationRelativeTo(null); 
 		GUI();
 	}
 	
 	public void GUI(){
 		this.init();
-		
-		this.add(grids, BorderLayout.CENTER);
+		this.setContentPane(grids);
 		grids.setLayout(new GridLayout(5, 5));
 		grids.setBorder(BorderFactory.createTitledBorder(""));
-		
-		for(int i = 0; i < 5; i++){
-			for(int j = 0; j < 5; j++){
-				grids.add(lights[i][j]);
-			}
-		}
-		
-	    this.add(panel1, BorderLayout.SOUTH);
-	    panel1.setLayout(new FlowLayout());
-
-	    
+		pattern1();
+		repaint();
 		this.setVisible(true);
 	}
-	
-	private void addButton(String label) {
-	      JButton button = new JButton("");
-	      grids.add(button);
-	   }
 	
 	private void init() {
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
 				lights[i][j] = new Light(i, j, false);
+				grids.add(lights[i][j]);
+				lights[i][j].addActionListener(c);
 			}
 		}
 	}
 	
-	public static void main (String[] args){
-		View v = new View();
+	public void pattern1() {
+		for(int i = 0; i < 5; i+=2){
+			for(int j = 0; j < 5; j+=2){
+				lights[i][j].changeCol();
+			}
+		}
+	}
+	
+	public void pattern2() {
+		for(int i = 0; i < 5; i++){
+			for(int j = 0; j < 5; j+=2){
+				lights[i][j].changeCol();
+			}
+		}
+	}
+	
+	public Light[][] getLights() {
+		return lights;
 	}
 
-	@Override
-	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }
