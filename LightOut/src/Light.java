@@ -11,8 +11,8 @@ public class Light extends JButton{
 		this.x=x;
 		this.y=y;
 	}
+	
 	public void changeCol(){
-		lon != lon;
 		if(lon)this.setBackground(Color.YELLOW);
 		else this.setBackground(Color.BLACK);
 	}
