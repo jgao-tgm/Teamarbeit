@@ -16,8 +16,11 @@ public class myPanel extends JPanel{
 			for(int j = 0; j < 5; ++j){
 				lights[i][j] = new Light(i, j);
 				this.add(lights[i][j]);
+				lights[i][j].addActionListener(c);
 			}		
 		}
+		lights[2][2] = new Light(2, 2);
+		this.add(lights[2][2]);
 	}
 	
 	public void pattern1() {
