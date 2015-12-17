@@ -1,31 +1,45 @@
+
+import java.awt.Color;
+import java.awt.Graphics;
+
+import javax.swing.JButton;
 import java.awt.Color;
 
 import javax.swing.JButton;
 
 public class Light extends JButton{
-	boolean lon;
-	int x;
-	int y;
+	private boolean lon;
+	private int x;
+	private int y;
+	
+	public Light(int x,int y){
+		super();
+		this.x=x;
+		this.y=y;
+	    this.setBackground(Color.BLACK);
+	}
 	
 	public int getX() {
 		return x;
 	}
 
-	public int getY() {
-		return y;
+	public boolean isLon() {
+		return lon;
 	}
-
-	public Light(int x,int y, boolean lon){
+	
+	public void setLon(boolean lon) {
 		this.lon=lon;
-		this.x=x;
-		this.y=y;
 		if(lon)this.setBackground(Color.YELLOW);
 		else this.setBackground(Color.BLACK);
 	}
+
+	public int getY() {
+		return y;
+	}
 	
 	public void changeCol(){
-		lon = !lon;
-		if(lon)this.setBackground(Color.YELLOW);
+		this.lon = !this.lon;
+		if(lon)this.setBackground(Color.RED);
 		else this.setBackground(Color.BLACK);
 	}
 }

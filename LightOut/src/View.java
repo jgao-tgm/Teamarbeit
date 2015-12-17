@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.awt.BorderLayout;import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
@@ -67,3 +68,14 @@ public class View extends JFrame{
 	}
 
 }
+=======
+
+
+public class View{
+
+	public View() {
+	}
+
+
+}
+>>>>>>> origin/master
