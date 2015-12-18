@@ -1,14 +1,30 @@
 import javax.swing.*;
 import java.awt.event.*;
+
+/**
+ * Klasse Controller
+ * @author Jindra, Gao, Danho
+ * @version 14-12-2015
+ */
 public class Controller implements ActionListener{
 	private myFrame mF;
 	private myPanel mP;
 	int i;
 
+	/**
+	 * Methode main
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public static void main(String[] args) {
 		Controller c = new Controller();
 	}
 	
+	/**
+	 * Konstruktor 
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public Controller() {
 		mP = new myPanel(this);
 		mF = new myFrame(mP,this);
