@@ -15,8 +15,8 @@ public class Controller implements ActionListener{
 		v.getLights()[x][y].changeCol();
 		if(x>0)v.getLights()[x-1][y].changeCol();
 		if(y>0)v.getLights()[x][y-1].changeCol();
-		if(x<4)v.getLights()[x+1][y].changeCol();
-		if(y<4)v.getLights()[x][y+1].changeCol();
+		if(x<6)v.getLights()[x+1][y].changeCol();
+		if(y<6)v.getLights()[x][y+1].changeCol();
 		for(int i = 0; i < 5; i+=2){
 			for(int j = 0; j < 5; j+=2){
 				if(v.getLights()[i][j].isLon())

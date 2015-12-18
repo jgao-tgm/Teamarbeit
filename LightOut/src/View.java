@@ -18,6 +18,8 @@ public class View extends JFrame{
 	JPanel grids = new JPanel();
 	JPanel panel1 = new JPanel();
 	private Controller c = new Controller();
+	private JLabel klicks;
+	int clicks;
 
 	public View() {
 		this.setTitle("Lights Out");
@@ -33,7 +35,6 @@ public class View extends JFrame{
 		grids.setLayout(new GridLayout(5, 5));
 		grids.setBorder(BorderFactory.createTitledBorder(""));
 		pattern1();
-		repaint();
 		this.setVisible(true);
 	}
 	
