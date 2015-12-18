@@ -17,6 +17,7 @@ public class Controller implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()!=mF.getReset()){
+			mF.zug();
 			int x =((Light)e.getSource()).getX();
 			int y =((Light)e.getSource()).getY();
 			mP.getLights()[x][y].changeCol();
