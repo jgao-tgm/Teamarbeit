@@ -24,7 +24,6 @@ public class Controller implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
 		
 		int x =((Light)e.getSource()).getX();
 		int y =((Light)e.getSource()).getY();
@@ -40,15 +39,9 @@ public class Controller implements ActionListener{
 			}
 		}
 		
-		
-		
-		
-		
 		i++;
 		JOptionPane.showMessageDialog(null, "Sie haben die "+i+".te Runde geschafft");
 		
-		
-=======
 		if(e.getSource()!=mF.getReset()){
 			mF.zug();
 			int x =((Light)e.getSource()).getX();
@@ -79,8 +72,8 @@ public class Controller implements ActionListener{
 		case 2: mP.pattern3(); break; 
 		case 3: mP.pattern4(); break; 
 		default: mP.randomPattern();break;
->>>>>>> origin/master
 		}
 	}
+}
 
 
