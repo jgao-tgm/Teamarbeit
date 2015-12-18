@@ -43,7 +43,9 @@ public class Controller implements ActionListener{
 		mF.setZug(0);
 		switch(i){
 		case 0: mP.pattern1(); break;
-		case 1: mP.pattern2(); break; 
+		case 1: mP.pattern2(); break;  
+		case 2: mP.pattern3(); break; 
+		case 3: mP.pattern4(); break; 
 		default: mP.randomPattern();break;
 		}
 	}
