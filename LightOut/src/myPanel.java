@@ -4,9 +4,20 @@ import java.awt.GridLayout;
 
 import javax.swing.JPanel;
 
+/**
+ * Klasse myPanel
+ * @author Jindra, Gao, Danho
+ * @version 14-12-2015
+ */
 public class myPanel extends JPanel{
 	private Light[][] lights;
 	
+	/**
+	 * Konstruktor
+	 * @param c
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public myPanel(Controller c) {
 		super();
 		lights = new Light[5][5];
@@ -21,6 +32,11 @@ public class myPanel extends JPanel{
 
 	}
 	
+	/**
+	 * Methode pattern1
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public void pattern1() {
 		for(int i = 0; i < 5; i+=2){
 			for(int j = 0; j < 5; j+=2){
@@ -29,6 +45,11 @@ public class myPanel extends JPanel{
 		}
 	}
 	
+	/**
+	 * Methode pattern2
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public void pattern2() {
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j+=2){
@@ -37,6 +58,11 @@ public class myPanel extends JPanel{
 		}
 	}
 	
+	/**
+	 * Methode pattern3
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public void pattern3() {
 		lights[1][1].changeCol();
 		lights[1][3].changeCol();
@@ -44,6 +70,11 @@ public class myPanel extends JPanel{
 		lights[3][1].changeCol();
 	}
 	
+	/**
+	 * Methode pattern4
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public void pattern4() {
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
@@ -57,10 +88,20 @@ public class myPanel extends JPanel{
 		}
 	}
 	
+	/**
+	 * Methode getLights
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public Light[][] getLights() {
 		return lights;
 	}
 
+	/**
+	 * Methode randomPattern
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public void randomPattern() {
 		int anzahl = (int)(Math.random()*15)+1;
 		int i = 0;

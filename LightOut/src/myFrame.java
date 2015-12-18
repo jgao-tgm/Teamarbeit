@@ -14,6 +14,12 @@ import javax.swing.JPanel;
 
 import com.sun.glass.events.KeyEvent;
 
+
+/**
+ * Klasse myFrame
+ * @author Jindra, Gao, Danho
+ * @version 14-12-2015
+ */
 public class myFrame extends JFrame{
 	private JPanel all;
 	private JPanel top;
@@ -23,24 +29,51 @@ public class myFrame extends JFrame{
 	private int zug;
 	private myPanel grids;
 	
+	/**
+	 * Methode zug
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public void zug(){
 		zug++;
 		getZählen().setText("Zug Nr. : "+getZug());
 	}
 	
+	/**
+	 * Methode setZug
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public void setZug(int zug){
 		this.zug=zug;
 		getZählen().setText("Zug Nr. : "+getZug());
 	}
 	
+	/**
+	 * Methode getZug
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public int getZug(){
 		return zug;
 	}
 
+	/**
+	 * Methode getZählen
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public JLabel getZählen() {
 		return zählen;
 	}
 
+	/**
+	 * Konstruktor 
+	 * @param grids
+	 * @param c
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public myFrame(myPanel grids,Controller c) {
 		super();
 		this.grids = grids;
@@ -67,6 +100,11 @@ public class myFrame extends JFrame{
 		this.setVisible(true);
 	}
 
+	/**
+	 * JButton getReset
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public JButton getReset() {
 		return reset;
 	}
