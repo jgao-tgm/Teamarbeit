@@ -5,22 +5,20 @@ import java.awt.GridLayout;
 import javax.swing.JPanel;
 
 public class myPanel extends JPanel{
-	private Light[][] lights = new Light[5][5];
-	private Controller c;
+	private Light[][] lights;
 	
 	public myPanel(Controller c) {
 		super();
-		this.c=c;
-		this.setLayout(new GridLayout(5, 5));
+		lights = new Light[5][5];
 		for(int i = 0; i <5; ++i){
 			for(int j = 0; j < 5; ++j){
-				lights[i][j] = new Light(i, j);
+				lights[i][j] = new Light(i, j, c);
 				this.add(lights[i][j]);
-				lights[i][j].addActionListener(c);
 			}		
 		}
-		lights[2][2] = new Light(2, 2);
-		this.add(lights[2][2]);
+		this.setLayout(new GridLayout(5, 5));
+		pattern1();
+
 	}
 	
 	public void pattern1() {

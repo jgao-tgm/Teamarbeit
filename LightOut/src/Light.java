@@ -12,11 +12,12 @@ public class Light extends JButton{
 	private int x;
 	private int y;
 	
-	public Light(int x,int y){
+	public Light(int x,int y, Controller c){
 		super();
 		this.x=x;
 		this.y=y;
 	    this.setBackground(Color.BLACK);
+	    this.addActionListener(c);
 	}
 	
 	public int getX() {

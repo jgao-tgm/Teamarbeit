@@ -1,7 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;
 public class Controller implements ActionListener{
-	private View v;
 	private myFrame mF;
 	private myPanel mP;
 	int i;
