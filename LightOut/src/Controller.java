@@ -16,7 +16,7 @@ public class Controller implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-<<<<<<< HEAD
+
 		int x =((Light)e.getSource()).getX();
 		int y =((Light)e.getSource()).getY();
 		v.getLights()[x][y].changeCol();
@@ -54,12 +54,8 @@ public class Controller implements ActionListener{
 				mP.getLights()[i][j].setLon(false);
 			}
 		}
-		mF.setZug(0);
-		switch(i){
-		case 0: mP.pattern1(); break;
-		case 1: mP.pattern2(); break; 
-		default: mP.randomPattern();break;
-		}
+		
+
 	}
 	
 }
