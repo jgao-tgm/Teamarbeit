@@ -38,15 +38,20 @@ public class myPanel extends JPanel{
 	}
 	
 	public void pattern3() {
-		lights[2][2].changeCol();
-		lights[2][4].changeCol();
-		lights[4][4].changeCol();
-		lights[4][2].changeCol();
+		lights[1][1].changeCol();
+		lights[1][3].changeCol();
+		lights[3][3].changeCol();
+		lights[3][1].changeCol();
 	}
 	
 	public void pattern4() {
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
+				lights[i][j].changeCol();
+			}
+		}
+		for(int i = 0; i < 5; i+=2){
+			for(int j = 0; j < 5; j+=2){
 				lights[i][j].changeCol();
 			}
 		}
@@ -57,7 +62,7 @@ public class myPanel extends JPanel{
 	}
 
 	public void randomPattern() {
-		int anzahl = (int)(Math.random()*15);
+		int anzahl = (int)(Math.random()*15)+1;
 		int i = 0;
 		int x;
 		int y;

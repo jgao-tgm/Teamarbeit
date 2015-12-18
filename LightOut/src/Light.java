@@ -1,10 +1,9 @@
 
-import java.awt.Color;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import javax.swing.JButton;
-
 import java.awt.Color;
 
 import javax.swing.JButton;
@@ -62,10 +61,7 @@ public class Light extends JButton{
 	 */
 	public void setLon(boolean lon) {
 		this.lon=lon;
-		this.x=x;
-		this.y=y;
 		if(lon)this.setBackground(Color.CYAN);
-		if(lon)this.setBackground(Color.YELLOW);
 		else this.setBackground(Color.BLACK);
 	}
 	
@@ -86,7 +82,6 @@ public class Light extends JButton{
 	public void changeCol(){
 		this.lon = !this.lon;
 		if(lon)this.setBackground(Color.CYAN);
-		if(lon)this.setBackground(Color.RED);
 		else this.setBackground(Color.BLACK);
 		this.repaint();
 	}
