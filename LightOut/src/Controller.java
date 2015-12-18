@@ -1,22 +1,30 @@
 import javax.swing.*;
-import java.awt.event.*;
-public class Controller implements ActionListener{
-	private myFrame mF;
-	private myPanel mP;
-	int i;
 
+import java.awt.event.*;
+
+/**
+ * Klasse Controller
+ * @author Jindra, Gao, Danho
+ * @version 14-12-2015
+ */
+public class Controller implements ActionListener{
+	
+	View v;
+	int i;
+	
+	/**
+	 * Methode main
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public static void main(String[] args) {
 		Controller c = new Controller();
+		View v = new View();
 	}
-	
-	public Controller() {
-		mP = new myPanel(this);
-		mF = new myFrame(mP,this);
-	}
-	
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
-
+		
 		int x =((Light)e.getSource()).getX();
 		int y =((Light)e.getSource()).getY();
 		v.getLights()[x][y].changeCol();
@@ -28,34 +36,18 @@ public class Controller implements ActionListener{
 			for(int j = 0; j < 5; j+=2){
 				if(v.getLights()[i][j].isLon())
 				return;
-=======
-		if(!(e.getSource()== mF.getReset())){
-			mF.zug();
-			int x =((Light)e.getSource()).getX();
-			int y =((Light)e.getSource()).getY();
-			mP.getLights()[x][y].changeCol();
-			if(x>0)mP.getLights()[x-1][y].changeCol();
-			if(y>0)mP.getLights()[x][y-1].changeCol();
-			if(x<4)mP.getLights()[x+1][y].changeCol();
-			if(y<4)mP.getLights()[x][y+1].changeCol();
-		
-			for(int i = 0; i < 5; i++){
-				for(int j = 0; j < 5; j++){
-					if(mP.getLights()[i][j].isLon())
-					return;
-				}
->>>>>>> origin/master
-			}
-			i++;
-			JOptionPane.showMessageDialog(mP, "Sie haben die "+i+".te Runde geschafft");
-		}
-		for(int i = 0; i < 5; i++){
-			for(int j = 0; j < 5; j++){
-				mP.getLights()[i][j].setLon(false);
 			}
 		}
 		
-
+		
+		
+		
+		
+		i++;
+		JOptionPane.showMessageDialog(null, "Sie haben die "+i+".te Runde geschafft");
+		
+		
+		}
 	}
-	
-}
+
+

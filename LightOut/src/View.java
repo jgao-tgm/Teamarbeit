@@ -11,7 +11,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-
+/**
+ * Klasse View
+ * @author Jindra, Gao, Danho
+ * @version 14-12-2015
+ *
+ */
 public class View extends JFrame{
 	
 	private Light[][] lights = new Light[5][5];
@@ -21,6 +26,11 @@ public class View extends JFrame{
 	private JLabel klicks;
 	int clicks;
 
+	/**
+	 * Konstruktor 
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public View() {
 		this.setTitle("Lights Out");
 		this.setSize(500, 500);
@@ -29,6 +39,11 @@ public class View extends JFrame{
 		GUI();
 	}
 	
+	/**
+	 * Methode GUI 
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public void GUI(){
 		this.init();
 		this.setContentPane(grids);
@@ -38,16 +53,26 @@ public class View extends JFrame{
 		this.setVisible(true);
 	}
 	
+	/**
+	 * Methode init 
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	private void init() {
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j++){
-				lights[i][j] = new Light(i, j, false);
+				lights[i][j] = new Light(i, j, null);
 				grids.add(lights[i][j]);
 				lights[i][j].addActionListener(c);
 			}
 		}
 	}
 	
+	/**
+	 * Methode pattern1
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public void pattern1() {
 		for(int i = 0; i < 5; i+=2){
 			for(int j = 0; j < 5; j+=2){
@@ -56,6 +81,11 @@ public class View extends JFrame{
 		}
 	}
 	
+	/**
+	 * Methode pattern2
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public void pattern2() {
 		for(int i = 0; i < 5; i++){
 			for(int j = 0; j < 5; j+=2){
@@ -64,6 +94,11 @@ public class View extends JFrame{
 		}
 	}
 	
+	/**
+	 * Methode getLights
+	 * @author Jindra, Gao, Danho
+	 * @since 14-12-2015
+	 */
 	public Light[][] getLights() {
 		return lights;
 	}
