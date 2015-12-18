@@ -16,6 +16,7 @@ public class Light extends JButton{
 		super();
 		this.x=x;
 		this.y=y;
+		lon = false;
 	    this.setBackground(Color.BLACK);
 	    this.addActionListener(c);
 	}
@@ -42,5 +43,6 @@ public class Light extends JButton{
 		this.lon = !this.lon;
 		if(lon)this.setBackground(Color.RED);
 		else this.setBackground(Color.BLACK);
+		this.repaint();
 	}
 }

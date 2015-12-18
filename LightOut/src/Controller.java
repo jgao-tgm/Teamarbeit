@@ -11,31 +11,40 @@ public class Controller implements ActionListener{
 	
 	public Controller() {
 		mP = new myPanel(this);
-		mF = new myFrame(mP);
+		mF = new myFrame(mP,this);
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		int x =((Light)e.getSource()).getX();
-		int y =((Light)e.getSource()).getY();
-		mP.getLights()[x][y].changeCol();
-		if(x>0)mP.getLights()[x-1][y].changeCol();
-		if(y>0)mP.getLights()[x][y-1].changeCol();
-		if(x<4)mP.getLights()[x+1][y].changeCol();
-		if(y<4)mP.getLights()[x][y+1].changeCol();
+		if(!(e.getSource()== mF.getReset())){
+			mF.zug();
+			int x =((Light)e.getSource()).getX();
+			int y =((Light)e.getSource()).getY();
+			mP.getLights()[x][y].changeCol();
+			if(x>0)mP.getLights()[x-1][y].changeCol();
+			if(y>0)mP.getLights()[x][y-1].changeCol();
+			if(x<4)mP.getLights()[x+1][y].changeCol();
+			if(y<4)mP.getLights()[x][y+1].changeCol();
 		
-		for(int i = 0; i < 5; i+=2){
-			for(int j = 0; j < 5; j+=2){
-				if(mP.getLights()[i][j].isLon())
-				return;
+			for(int i = 0; i < 5; i++){
+				for(int j = 0; j < 5; j++){
+					if(mP.getLights()[i][j].isLon())
+					return;
+				}
+			}
+			i++;
+			JOptionPane.showMessageDialog(mP, "Sie haben die "+i+".te Runde geschafft");
+		}
+		for(int i = 0; i < 5; i++){
+			for(int j = 0; j < 5; j++){
+				mP.getLights()[i][j].setLon(false);
 			}
 		}
-		i++;
-		
-		JOptionPane.showMessageDialog(mP, "Sie haben die "+i+".te Runde geschafft");
+		mF.setZug(0);
 		switch(i){
 		case 0: mP.pattern1(); break;
 		case 1: mP.pattern2(); break; 
+		default: mP.randomPattern();break;
 		}
 	}
 	
