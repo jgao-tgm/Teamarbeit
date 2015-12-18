@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 
 /**
  * Klasse myPanel
- * @author Jindra, Gao, Danho
+ * @author Gao, Jindra(überarbeitet)
  * @version 14-12-2015
  */
 public class myPanel extends JPanel{
@@ -15,7 +15,6 @@ public class myPanel extends JPanel{
 	/**
 	 * Konstruktor
 	 * @param c
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public myPanel(Controller c) {
@@ -34,7 +33,6 @@ public class myPanel extends JPanel{
 	
 	/**
 	 * Methode pattern1
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public void pattern1() {
@@ -47,7 +45,6 @@ public class myPanel extends JPanel{
 	
 	/**
 	 * Methode pattern2
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public void pattern2() {
@@ -60,7 +57,6 @@ public class myPanel extends JPanel{
 	
 	/**
 	 * Methode pattern3
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public void pattern3() {
@@ -72,7 +68,6 @@ public class myPanel extends JPanel{
 	
 	/**
 	 * Methode pattern4
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public void pattern4() {
@@ -90,7 +85,6 @@ public class myPanel extends JPanel{
 	
 	/**
 	 * Methode getLights
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public Light[][] getLights() {
@@ -99,7 +93,6 @@ public class myPanel extends JPanel{
 
 	/**
 	 * Methode randomPattern
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public void randomPattern() {

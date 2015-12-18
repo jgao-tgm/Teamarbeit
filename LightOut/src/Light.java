@@ -11,7 +11,7 @@ import javax.swing.JButton;
 
 /**
  * Klasse Light
- * @author Jindra, Gao, Danho
+ * @author Danho
  * @version 14-12-2015
  */
 public class Light extends JButton{
@@ -24,7 +24,7 @@ public class Light extends JButton{
 	 * @param x "x-Koordinate" vom Lichtfeld
 	 * @param y "y-Koordinate" vom Lichtfeld
 	 * @param c Controller
-	 * @author Jindra, Gao, Danho
+	 * @author Danho
 	 * @since 14-12-2015
 	 */
 	public Light(int x,int y, Controller c){
@@ -38,7 +38,6 @@ public class Light extends JButton{
 	
 	/**
 	 * Methode getX
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public int getX() {
@@ -47,7 +46,6 @@ public class Light extends JButton{
 
 	/**
 	 * Methode isLon
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public boolean isLon() {
@@ -57,7 +55,6 @@ public class Light extends JButton{
 	/**
 	 * Methode setLon
 	 * @param lon 
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public void setLon(boolean lon) {
@@ -68,7 +65,6 @@ public class Light extends JButton{
 
 	/**
 	 * Methode getY
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public int getY() {
@@ -78,7 +74,7 @@ public class Light extends JButton{
 
 	/**
 	 * Methode changeCol
-	 * @author Jindra, Gao, Danho
+	 * @author Danho
 	 * @since 14-12-2015
 	 */
 	public void changeCol(){

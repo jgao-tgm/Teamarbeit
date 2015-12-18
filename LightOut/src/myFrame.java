@@ -17,7 +17,7 @@ import com.sun.glass.events.KeyEvent;
 
 /**
  * Klasse myFrame
- * @author Jindra, Gao, Danho
+ * @author Gao, Jindra(überarbeitet)
  * @version 14-12-2015
  */
 public class myFrame extends JFrame{
@@ -31,7 +31,6 @@ public class myFrame extends JFrame{
 	
 	/**
 	 * Methode zug
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public void zug(){
@@ -41,7 +40,6 @@ public class myFrame extends JFrame{
 	
 	/**
 	 * Methode setZug
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public void setZug(int zug){
@@ -51,7 +49,6 @@ public class myFrame extends JFrame{
 	
 	/**
 	 * Methode getZug
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public int getZug(){
@@ -60,7 +57,6 @@ public class myFrame extends JFrame{
 
 	/**
 	 * Methode getZählen
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public JLabel getZählen() {
@@ -69,9 +65,8 @@ public class myFrame extends JFrame{
 
 	/**
 	 * Konstruktor 
-	 * @param grids
-	 * @param c
-	 * @author Jindra, Gao, Danho
+	 * @param grids Button Panel
+	 * @param c Controller
 	 * @since 14-12-2015
 	 */
 	public myFrame(myPanel grids,Controller c) {

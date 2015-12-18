@@ -3,7 +3,7 @@ import java.awt.event.*;
 
 /**
  * Klasse Controller
- * @author Jindra, Gao, Danho
+ * @author Jindra, Danho
  * @version 14-12-2015
  */
 public class Controller implements ActionListener{
@@ -13,7 +13,6 @@ public class Controller implements ActionListener{
 
 	/**
 	 * Methode main
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public static void main(String[] args) {
@@ -22,7 +21,6 @@ public class Controller implements ActionListener{
 	
 	/**
 	 * Konstruktor 
-	 * @author Jindra, Gao, Danho
 	 * @since 14-12-2015
 	 */
 	public Controller() {
@@ -30,6 +28,10 @@ public class Controller implements ActionListener{
 		mF = new myFrame(mP,this);
 	}
 	
+	/**
+	 * action performed ActionListener
+	 * @since 14-12-2015
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource()!=mF.getReset()){
